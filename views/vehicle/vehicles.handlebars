@@ -1,0 +1,40 @@
+<h2>Controle de Veículos</h2>
+
+<form action="/vehicle/add" method="post" class="veh-form">
+    <label for="model">Modelo: </label>
+    <input type="text" name="model" placeholder="Digite o modelo do veículo">
+    <label for="plate">Placa: </label>
+    <input type="text" name="plate" placeholder="Digite a placa do veículo">
+    <label for="year">Ano: </label>
+    <input type="text" name="year" placeholder="Digite o ano do veículo">
+    <label for="owner">Proprietário: </label>
+    <input type="text" name="owner" placeholder="Digite o proprietário do veículo">
+
+    <button type="submit" class="btn-send">Enviar</button>
+
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Modelo</th>
+            <th>Placa</th>
+            <th>Ano</th>
+            <th>Proprietário</th>
+            <th>Edição</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each vehicles}}
+        <tr>
+            <td>{{model}}</td>
+            <td>{{plate}}</td>
+            <td>{{year}}</td>
+            <td>{{owner}}</td>
+            <td>
+                <a href=""><button>Editar</button></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
