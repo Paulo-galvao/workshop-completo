@@ -1,0 +1,39 @@
+<h2>Controle de Oficinas</h2>
+
+<form action="/workshop/add" method="post" class="veh-form">
+    <label for="name">Nome: </label>
+    <input type="text" name="name" placeholder="Digite o nome da oficina">
+    <label for="addres">Endereço: </label>
+    <input type="text" name="address" placeholder="Digite endereço da oficina">
+    <label for="specialties">Especialidades: </label>
+    <input type="text" name="specialties" placeholder="Digite a especialidade da oficina">
+    
+
+    <button type="submit" class="btn-send">Enviar</button>
+    <a class="btn-send btn-link" href="/">Voltar</a>
+
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Especialidades</th>
+            <th>Opções</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each workshops}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{address}}</td>
+            <td>{{specialties}}</td>
+            <td class="options">
+                <a href="/workshop/edit/{{_id}}"><button class="edit"><i class='bx bxs-edit-alt'></i></button></a>
+                <a href="/workshop/delete/{{_id}}"><button class="delete"><i class='bx bx-trash-alt'></i></button></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

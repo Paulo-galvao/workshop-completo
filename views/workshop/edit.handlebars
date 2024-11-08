@@ -1,0 +1,12 @@
+<form action="/workshop/edit" method="post" class="veh-form">
+    <input type="hidden" name="id" value={{workshops._id}}>
+    <label for="name">Nome: </label>
+    <input type="text" name="name" value={{workshops.name}} placeholder="Digite o nome da oficina">
+    <label for="addres">Endereço: </label>
+    <input type="text" name="address" value={{workshops.address}} placeholder="Digite endereço da oficina">
+    <label for="specialties">Especialidades: </label>
+    <input type="text" name="specialties" value={{workshops.specialties}} placeholder="Digite a especialidade da oficina">
+
+    <button type="submit" class="btn-send">Enviar</button>
+
+</form>

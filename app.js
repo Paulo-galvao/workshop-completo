@@ -4,7 +4,8 @@ import "dotenv/config";
 const app = e();
 const port = process.env.PORT;
 
-import vehicleRoute from './routes/vehicle.js'
+import vehicleRoute from './routes/vehicle.js';
+import workshopRouter from './routes/workshop.js';
 
 /**
  * Config
@@ -26,7 +27,8 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.use('/vehicle', vehicleRoute);  
+app.use('/vehicle', vehicleRoute);
+app.use('/workshop', workshopRouter);
 
 app.listen(port, () => {
     console.log("Server running at port", port);

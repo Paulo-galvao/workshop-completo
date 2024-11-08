@@ -11,6 +11,7 @@
     <input type="text" name="owner" placeholder="Digite o proprietário do veículo">
 
     <button type="submit" class="btn-send">Enviar</button>
+    <a class="btn-send btn-link" href="/">Voltar</a>
 
 </form>
 
@@ -21,7 +22,7 @@
             <th>Placa</th>
             <th>Ano</th>
             <th>Proprietário</th>
-            <th>Edição</th>
+            <th>Opções</th>
         </tr>
     </thead>
     <tbody>
@@ -31,8 +32,9 @@
             <td>{{plate}}</td>
             <td>{{year}}</td>
             <td>{{owner}}</td>
-            <td>
-                <a href=""><button>Editar</button></a>
+            <td class="options">
+                <a href="/vehicle/edit/{{_id}}"><button class="edit" ><i class='bx bxs-edit-alt'></i></button></a>
+                <a href="/vehicle/delete/{{_id}}"><button class="delete"><i class='bx bx-trash-alt'></i></button></a>
             </td>
         </tr>
         {{/each}}

@@ -1,0 +1,8 @@
+<span>Tem certeza que deseja excluir {{vehicle.model}}?</span>
+<form action="/vehicle/delete" method="post">
+    <input type="hidden" name="id" value={{vehicle._id}}>
+    <button type="submit">Sim</button>
+    <a href="/vehicle">
+        Não
+    </a>
+</form>

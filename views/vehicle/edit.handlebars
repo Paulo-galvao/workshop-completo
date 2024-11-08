@@ -1,0 +1,14 @@
+<form action="/vehicle/edit" method="post" class="veh-form">
+    <input type="hidden" name="id" value={{vehicle._id}}>
+    <label for="model">Modelo: </label>
+    <input type="text" value={{vehicle.model}} name="model" placeholder="Digite o modelo do veículo">
+    <label for="plate">Placa: </label>
+    <input type="text" value={{vehicle.plate}} name="plate" placeholder="Digite a placa do veículo">
+    <label for="year">Ano: </label>
+    <input type="text" value={{vehicle.year}} name="year" placeholder="Digite o ano do veículo">
+    <label for="owner">Proprietário: </label>
+    <input type="text" value={{vehicle.owner}} name="owner" placeholder="Digite o proprietário do veículo">
+
+    <button type="submit" class="btn-send">Enviar</button>
+
+</form>
